@@ -1,5 +1,4 @@
 import HeroSection from "../components/Hero";
-import Navbar from "../components/Navbar";
 
 const Home = () => {
   return (
@@ -7,7 +6,7 @@ const Home = () => {
       <HeroSection />
       <div className="container">
         <div className="intro">
-          <h1>This is the Home page</h1>
+          <h1>Follow me along in this journey!</h1>
         </div>
       </div>
     </div>

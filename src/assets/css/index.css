@@ -80,3 +80,36 @@ em {
   font-weight: 700;
   font-size: 60px;
 }
+.footer-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  padding: 30px;
+  background: rgba(235, 0, 0, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(235, 0, 0, 0.3);
+}
+.about-img img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+  max-width: 200px;
+}
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 24px;
+  text-align: center;
+  line-height: 2;
+}
+.about h1,
+.about h2,
+.about h3 {
+  font-size: 54px;
+}

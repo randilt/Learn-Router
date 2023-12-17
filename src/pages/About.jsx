@@ -7,7 +7,8 @@ const About = () => {
   const navigate = useNavigate();
   const checkPw = () => {
     if (pass === "hello") {
-      navigate("/");
+      document.getElementById("pw-success").innerHTML =
+        "<h4> Nice, You guessed it right! <br/> But the hidden page is still not created sorry :( </h4>";
     } else {
       setCount(count - 1);
       document.getElementById("pw-checker").innerHTML =
@@ -61,14 +62,19 @@ const About = () => {
                 Attempts Remaining: {count}
               </b>
               <br />
-              <input
-                id="btn"
-                type="text"
-                value={pass}
-                onChange={(e) => setPass(e.target.value)}
-              />
-              <button onClick={checkPw}>View Page</button>
-              <div id="pw-checker"></div>{" "}
+              <div className="check-password">
+                <input
+                  id="pass"
+                  type="text"
+                  value={pass}
+                  onChange={(e) => setPass(e.target.value)}
+                />
+                <button className="button" onClick={checkPw}>
+                  View Page
+                </button>
+              </div>
+              <div id="pw-checker"></div>
+              <div id="pw-success"></div>
             </>
           ) : (
             <h4>No more guesses, Refresh to retry.</h4>

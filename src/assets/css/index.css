@@ -113,3 +113,32 @@ em {
 .about h3 {
   font-size: 54px;
 }
+#pass {
+  width: 200px;
+  height: 50px;
+  font-size: 32px;
+  padding-left: 20px;
+  color: #282424;
+  border: none;
+  outline: transparent;
+  border-radius: 20px 0 0 20px;
+}
+.button {
+  height: 50px;
+  width: 80px;
+  border-radius: 0 20px 20px 0;
+  outline: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+  background-color: red;
+  cursor: pointer;
+}
+.check-password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#pw-success {
+  color: green;
+}

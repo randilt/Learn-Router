@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <nav>
         <div className="logo">
-          <h1>ReactRouter</h1>
+          <h1>LearningRouter</h1>
         </div>
         <div className="links">
           <ul>

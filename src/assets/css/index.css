@@ -1,12 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  color: red;
+  background-color: #282424;
+}
 nav {
   display: flex;
   color: red;
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+  margin-bottom: 30px;
   padding: 30px;
   background: rgba(235, 0, 0, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -14,6 +26,13 @@ nav {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(235, 0, 0, 0.3);
   justify-content: space-between;
+}
+.container {
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .links ul {
   display: flex;
@@ -32,4 +51,32 @@ nav h1 {
 }
 .links ul li {
   cursor: pointer;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 40px;
+  text-align: center;
+}
+.hero-images img {
+  max-width: 300px;
+}
+.hero-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: 40px;
+}
+em {
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 60px;
 }

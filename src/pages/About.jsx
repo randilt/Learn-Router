@@ -1,4 +1,19 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 const About = () => {
+  const [pass, setPass] = useState("");
+  const [count, setCount] = useState(3);
+  const navigate = useNavigate();
+  const checkPw = () => {
+    if (pass === "hello") {
+      navigate("/");
+    } else {
+      setCount(count - 1);
+      document.getElementById("pw-checker").innerHTML =
+        "<h6> Wrong Password, Try Again <br/> <b>Hint: hello</b> </h6>";
+    }
+  };
   return (
     <div>
       <div className="container about">
@@ -39,6 +54,25 @@ const About = () => {
             exercises. Let's learn and grow together in the fascinating realm of
             React and React Router.
           </p>
+          {count > 0 ? (
+            <>
+              <b>
+                Enter the correct password to view the hidden page <br />
+                Attempts Remaining: {count}
+              </b>
+              <br />
+              <input
+                id="btn"
+                type="text"
+                value={pass}
+                onChange={(e) => setPass(e.target.value)}
+              />
+              <button onClick={checkPw}>View Page</button>
+              <div id="pw-checker"></div>{" "}
+            </>
+          ) : (
+            <h4>No more guesses, Refresh to retry.</h4>
+          )}
         </div>
       </div>
     </div>
